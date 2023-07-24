@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <link rel="stylesheet" href="https://s...content-available-to-author-only...n.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <script src="https://c...content-available-to-author-only...y.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://c...content-available-to-author-only...r.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://s...content-available-to-author-only...n.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <title>Home Loan Status Prediction</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-image: url("https://e...content-available-to-author-only...c.com/images?q=tbn:ANd9GcRxCGJ9M-scQPhtLOUL4ALCvzG3ztQzwiHhX9xONHqwZA&s");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    nav {
+      overflow: hidden;
+      background-color: #333;
+    }
+    
+    nav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    
+    nav a:hover {
+      background-color: #45a049;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    
+    input[type="text"] {
+      width: 200px;
+      padding: 5px;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    
+    button:hover {
+      background-color: #45a049;
+    }
+    
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      text-align: center;
+      animation: slideIn 1s ease;
+    }
+    
+    #about {
+      display: none; /* Initially hidden */
+      margin-top: 50px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 4px;
+      animation: slideIn 1s ease;
+    }
+
+    /* Animation keyframes for slide-in effect */
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#aboutbutton" >About</a>
+    <a href="#">Contact</a>
+  </nav>
+  <h1>Home Loan Status Prediction</h1>
+    <div id="aboutButton">
+        <p>Getting a home loan and checking the eligibility is not a straightforward process. It is time-consuming for both the housing finance company and the customer who takes the home loan. A lot of time is wasted on the completion of the entire process. Even using an online application does not ease the process as many details are required such as Gender, Marital Status, Education, Dependents, Self Employed or not, Loan Amount, Loan Amount Term, Credit History, Property Area, and Loan Status. The loan status is the target data and others are its parameters through which some output and pattern can be obtained.</p>
+        <p>The company also collects information about the area urban, semi-urban, rural wants customer wants its property. To overcome this issue, machine learning is extremely helpful to automate the process to check the eligibility of customers. However, the fundamental issues that have been used over several years do not care about the outliers and machine learning models, resulting in less accuracy and affecting the overall performance of the model.</p>
+        <p>To reduce this issue, the project uses a data cleaning technique for removing null, missing, and repeated values before applying bivariate and multivariate analysis, which helps to categorize the type of data, whether it is numerical or categorical, for understanding some unique relations and patterns that will help increase performance and accuracy as well as the precision of the model.</p>
+        <p>The machine learning algorithm contains many techniques like Random Forest, decision tree, and many others, but in the project, the two best classification models that are Logistic Regression and Gradient Boosting are used. Logistic Regression is a type of supervised learning that helps for better classification and predicts a discrete value, and gradient boosting removes the errors and mistakes of the previous model and helps improve overall performance.</p>
+        <p>For automation of the process for eligibility of the customer, a dataset is collected by the housing finance company, then hidden trends and patterns are found, which helps build a robust machine learning model. The performance of the model is evaluated using performance metrics such as accuracy, precision, and F1 score. The use of evaluation methods helps to produce the best model that is best to check the eligibility and make this process easier, hassle-free, and convenient.</p>
+        <p>The project uses multiple techniques and methods, which makes it a differentiating factor when compared with other models. The use of modern technology not only saves time but also helps in changing the traditional methods and bringing the revolution to improve without compromising the time. Automation also reduces the data cleaner without outliers giving the perfect model that the company wants and can also be further used to change dependents factor for the easy-going process of checking the background details of customers to avoid the chance of getting fraud.</p>
+    </div>
+<h1>CHECK YOUR HOME LOAN SANCTION DE</h1>
+  
+  <form id="predictionForm" style="text-align: center;" allign="center">
+    
+    <label for="name">Please Enter The Name:</label>
+    <input type="text" id="name" required><br>
+    
+    <label for="married">Please Enter  Are You MArried::</label>
+    <input type="text" id="married" required><br>
+    
+    <label for="dependants">Please enter value for dependants:</label>
+    <input type="text" id="dependants" required><br>
+    
+    <label for="education">Please enter value for education:</label>
+    <input type="text" id="education" required><br>
+    
+    <label for="selfEmployed">Please enter value for self employed:</label>
+    <input type="text" id="selfEmployed" required><br>
+    
+    <label for="applicationIncome">Please enter value for application income:</label>
+    <input type="text" id="applicationIncome" required><br>
+    
+    <label for="coapplicantIncome">Please enter value for coapplicant income:</label>
+    <input type="text" id="coapplicantIncome" required><br>
+    
+    <label for="loanAmount">Please enter valufor loan amount:</label>
+    <input type="text" id="loanAmount" required><br>
+    <label for="loanAmountTerm">Please enter value for loan amount term:</label>
+        <input type="text" id="loanAmountTerm" required><br>
+        
+        <label for="creditHistory">Please enter value for credit history:</label>
+        <input type="text" id="creditHistory" required><br>
+        
+        <label for="propertyArea1">Please enter value for property area1 input:</label>
+        <input type="text" id="propertyArea1" required><br>
+        
+        <button type="submit">Predict Next Value</button>
+      </form>
+      
+      <div id="result"></div>
+      
+      <script>
+        document.getElementById("predictionForm").addEventListener("submit", function(event) {
+          event.preventDefault();
+          
+          var name = document.getElementById("name").value;
+          var married = document.getElementById("married").value;
+          var dependants = document.getElementById("dependants").value;
+          var education = document.getElementById("education").value;
+          var selfEmployed = document.getElementById("selfEmployed").value;
+          var applicationIncome = document.getElementById("applicationIncome").value;
+          var coapplicantIncome = document.getElementById("coapplicantIncome").value;
+          var loanAmount = document.getElementById("loanAmount").value;
+          var loanAmountTerm = document.getElementById("loanAmountTerm").value;
+          var creditHistory = document.getElementById("creditHistory").value;
+          var propertyArea1 = document.getElementById("propertyArea1").value;
+          var aboutButton = document.getElementById("aboutButton");
+    var aboutSection = document.getElementById("about");
+    var backgroundImage = document.getElementById("backgroundImage");
+
+    aboutButton.addEventListener("click", function(event) {
+      event.preventDefault();
+      aboutSection.style.display = "block";
+      backgroundImage.style.backgroundImage = 'url("https://e...content-available-to-author-only...c.com/images?q=tbn:ANd9GcRxCGJ9M-scQPhtLOUL4ALCvzG3ztQzwiHhX9xONHqwZA&s")';
+      backgroundImage.style.backgroundRepeat = "no-repeat";
+      backgroundImage.style.backgroundSize = "cover";
+    });
+    
+          var result = document.getElementById("result");
+          result.innerHTML = "Prediction: Your predicted value for yy is ..."; // Add your prediction result here
+          result.style.display = "block";
+        });
+      </script>
+    </body>
+    </html>
+    
